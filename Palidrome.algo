@@ -1,0 +1,58 @@
+ALGORITHM is palindrome // start the algorithm
+VAR
+    word: STRING = "kayak" // Declare your variables of the word with the word
+    reverseWord: STRING // Declare the reverse word variable
+BEGIN
+    reverseWord = reverse_string(word) // use the reverse srting method to reverse the word and assign it to the reverse word variable
+
+
+IF (word.LENGTH < 2 OR word = " ") THEN //check if word contains single character of an empty space
+    write(word + " " + "is a palindrome")
+END_IF
+    set_instructions
+END_IF    
+
+
+
+    // compare the ending character in each word against the other
+IF (word[word.LENGTH -1] - reverseWord[reverseWord.length - 1]) THEN
+    
+    
+  // compare the reversed string againt each other to check if the word is a palindrome
+
+    IF (word = reverseWord) THEN
+    write(word + " " + "is a palidrome")
+    END_IF
+ELSE
+    write(word + " " + "is not a palidrome")
+END_IF
+
+END
+
+
+// A FUNCTION TO REVERSE  A STRING
+
+FUNCTION reverse_string(word) : STRING
+VAR
+    teststring: STRING = " ";
+BEGIN
+    //Decrement from the word.length - 1 until it is less than or equal to zero
+    FOR i FROM word.length -1 TO 0 STEP i-- DO
+        teststring = teststring + word[i]
+    END_FOR
+
+    RETURN teststring;
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
